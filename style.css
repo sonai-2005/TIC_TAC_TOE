@@ -11,28 +11,36 @@ body {
     justify-content: center;
     align-items: center;
     height: 70vh;
+    
 
 }
-.game{
-    height: 60vmin;
+.game {
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr); 
+    grid-template-rows: repeat(3, 1fr);  
+    gap: 1.2vmin; 
     width: 60vmin;
-    display:flex;
-    flex-wrap: wrap;
-    gap:1.2vmin;
+    height: 60vmin;
     justify-content: center;
     align-items: center;
 }
-.box{
-    height: 20vmin;
-    width:16vmin;
+
+.box {
+    width: 100%; 
+    aspect-ratio: 1 / 1; 
     border-radius: 3vh;
+    font-size: 5vmin;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #E1DED7;
     box-shadow: 0 0 0.5rem rgba(0, 0, 0, 1);
-    font-size: 10vmin;
-    color: #1c0101;
     transition: transform 0.25s ease-in-out;
-    background-color:#E1DED7;
-    
+    color:rgb(83, 52, 52);
+    font-size: 6vmin;
 }
+
 .box:hover{
     transform:scale(1.1);
 }

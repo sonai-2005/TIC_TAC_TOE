@@ -26,11 +26,14 @@ let resetGame = () => {
     console.log("started again(RESET) ");
     enableBoxes();
     msgcontainer.classList.add("hide");
+    start =0
 
 }
+let start =0;
 newGamebtn.addEventListener("click", () => {
     resetGame();
 })
+
 reset.addEventListener("click",resetGame);
 let user = "x";
 boxes.forEach((box) => {
@@ -45,6 +48,7 @@ boxes.forEach((box) => {
             user = "x";
         }
         box.disabled = true;
+        start =1;
         checkwinner();
     })
 
