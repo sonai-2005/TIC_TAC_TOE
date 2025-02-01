@@ -4,7 +4,7 @@ let newGamebtn = document.querySelector(".new-btn");
 let msgcontainer = document.querySelector(".msg-container");
 let msg = document.querySelector("#msg");
 let score = document.querySelector(".score");
-let x =0,o=0;
+let x =0,o=0,count =0;
 const patterns = [
     [0, 1, 2],
     [3, 4, 5],
@@ -15,6 +15,11 @@ const patterns = [
     [0, 4, 8],
     [2, 4, 6]
 ];
+let draw = ()=>{
+    count =0;
+    msg.innerText ="here is a draw ";
+    resetGame();
+}
 let enableBoxes = () => {
     boxes.forEach((box) => {
         box.disabled = false;
@@ -22,6 +27,7 @@ let enableBoxes = () => {
     })
 }
 let resetGame = () => {
+    count =0;
     console.log("started again(RESET) ");
     enableBoxes();
     msgcontainer.classList.add("hide");
@@ -37,6 +43,7 @@ reset.addEventListener("click",resetGame);
 let user = "x";
 boxes.forEach((box) => {
     box.addEventListener("click", () => {
+        count++;
         console.log(`user ${user} has clicked ! `);
         if (user === 'x') {
             box.innerText = "x";
@@ -49,6 +56,9 @@ boxes.forEach((box) => {
         box.disabled = true;
         start =1;
         checkwinner();
+        if(count==9){
+            draw();
+        }
     })
 
 });
