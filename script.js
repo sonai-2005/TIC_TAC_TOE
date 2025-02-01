@@ -19,7 +19,6 @@ let enableBoxes = () => {
     boxes.forEach((box) => {
         box.disabled = false;
         box.innerText = "";
-        score.innerText = 'score: X = ' +x +' '+' O = '+o;
     })
 }
 let resetGame = () => {
@@ -57,6 +56,7 @@ let showwinner = (winner) => {
     console.log(`congratulations the winner is ${winner}`);
     msgcontainer.classList.remove("hide");
     msg.innerText = winner + ' won the game';
+    score.innerText = 'score: X = ' +x +' '+' O = '+o;
     boxes.forEach((box) => {
         box.disabled = true;
     })
