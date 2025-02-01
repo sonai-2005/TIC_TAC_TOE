@@ -26,6 +26,7 @@ body {
 }
 
 .box {
+    
     width: 100%; 
     aspect-ratio: 1 / 1; 
     border-radius: 3vh;
@@ -38,7 +39,7 @@ body {
     box-shadow: 0 0 0.5rem rgba(0, 0, 0, 1);
     transition: transform 0.25s ease-in-out;
     color:rgb(83, 52, 52);
-    font-size: 6vmin;
+    font-size: 14vmin;
 }
 
 .box:hover{
